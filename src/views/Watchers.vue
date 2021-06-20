@@ -24,9 +24,9 @@
         <span class="highlight">classroom</span>.<span class="highlightGreen">student</span>.<span class="highlightBlue">task</span>.<span class="highlightOrange">number</span>
       &#10101;&#10101;
     &lt;/h2&gt;
-    &lt;p&gt;&#10100;&#10100; <span class="highlight">classroom</span>.<span class="highlightGreen">student</span>.<span class="highlightBlue">task</span>.title &#10101;&#10101;&lt;/p&gt;
+    &lt;p&gt;&#10100;&#10100; <span class="highlight">classroom</span>.<span class="highlightGreen">student</span>.<span class="highlightBlue">task</span>.<span class="highlightOrange">title</span> &#10101;&#10101;&lt;/p&gt;
     &lt;h2 :class="colored"&gt;Description&lt;/h2&gt;
-    &lt;p&gt;&#10100;&#10100; <span class="highlight">classroom</span>.<span class="highlightGreen">student</span>.<span class="highlightBlue">task</span>.body &#10101;&#10101;&lt;/p&gt;
+    &lt;p&gt;&#10100;&#10100; <span class="highlight">classroom</span>.<span class="highlightGreen">student</span>.<span class="highlightBlue">task</span>.<span class="highlightOrange">body</span> &#10101;&#10101;&lt;/p&gt;
   &lt;/div&gt;
 &lt;/div&gt;
 ...
@@ -65,21 +65,21 @@ watch: {
         if (task) Object.assign(this.<span class="highlight">classroom</span>.<span class="highlightGreen">student</span>.<span class="highlightBlue">task</span>, task)
         else
           Object.assign(this.<span class="highlight">classroom</span>.<span class="highlightGreen">student</span>.<span class="highlightBlue">task</span>, {
-            title: 'Not Found',
-            body: 'Not Found',
+            <span class="highlightOrange">title</span>: 'Not Found',
+            <span class="highlightOrange">body</span>: 'Not Found',
           })
 <span class="highlightSky">      },
       deep: true,
       immediate: true,
     },
     {
-      handler: '<span class="highlightGray">colorHandler</span>',
+      handler: '<span class="highlightCotton">colorHandler</span>',
       deep: true,
     },
   ]</span>,
 },
 methods: {
-  <span class="highlightGray">colorHandler</span>() {
+  <span class="highlightCotton">colorHandler</span>() {
     this.colored = [
       'highlight',
       'highlightBlue',
@@ -186,7 +186,8 @@ export default {
         'highlightPink',
         'highlightSky',
         'highlightOrange',
-      ][Math.floor(Math.random() * 7)]
+        'highlightCotton',
+      ][Math.floor(Math.random() * 8)]
     },
   },
 }

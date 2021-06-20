@@ -77,7 +77,7 @@ section {
     background-color: black;
     padding: 10px;
     border: 1px solid white;
-    .highlightGray {
+    .highlightCotton {
       color: rgb(0, 255, 221);
     }
     .highlight {
