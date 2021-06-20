@@ -77,7 +77,9 @@ section {
     background-color: black;
     padding: 10px;
     border: 1px solid white;
-
+    .highlightGray {
+      color: rgb(0, 255, 221);
+    }
     .highlight {
       color: yellow;
     }
@@ -103,7 +105,6 @@ section {
     pre {
       outline: none;
       flex: 1;
-      margin: 0 0 1em;
       padding: 0.5em 1em;
       display: flex;
       code {
