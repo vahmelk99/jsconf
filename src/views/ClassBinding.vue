@@ -186,14 +186,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-pre[contenteditable] {
-  outline: none;
-}
-
-a,
-h1 {
-  margin: 20px 0;
-}
 a {
   font-size: 20px;
   color: green;
@@ -214,14 +206,20 @@ section {
     background-color: black;
     padding: 10px;
     border: 1px solid white;
-    span.highlight {
-      color: yellow;
+    pre[contenteditable] {
+      outline: none;
+      flex: auto;
     }
-    span.highlightBlue {
-      color: #679ddf;
-    }
-    span.highlightGreen {
-      color: rgb(255, 71, 71);
+    span {
+      &.highlight {
+        color: yellow;
+      }
+      &.highlightBlue {
+        color: #679ddf;
+      }
+      &.highlightGreen {
+        color: rgb(255, 71, 71);
+      }
     }
     code {
       font-family: monospace, 'courier new';

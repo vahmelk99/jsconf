@@ -5,6 +5,7 @@
       <img alt="Vue logo" src="../assets/jsconf.png" />
     </div>
     <h1>Welcome to JSConf Armenia 2021</h1>
+    <h2>Vahagn Melkonyan</h2>
   </div>
 </template>
 
