@@ -1,7 +1,10 @@
 <template>
   <div class="about">
     <h1>Class binding ways</h1>
-    <a href="https://vuejs.org/v2/guide/class-and-style.html" target="_blank"
+    <a
+      class="resource"
+      href="https://vuejs.org/v2/guide/class-and-style.html"
+      target="_blank"
       >Resource</a
     >
 
@@ -87,8 +90,8 @@ export default {
         <pre contenteditable="true">
 <code>&lt;div
   :class="{
-    '<span class="highlight">static-class-name</span>': <span class="highlightGreen">condition1</span>,
-    <span class="highlight">alsoCanHaveStaticClasses</span>: <span class="highlightGreen">condition2</span>,
+    '<span class="highlight">static-class-name</span>': <span class="highlightRed">condition1</span>,
+    <span class="highlight">alsoCanHaveStaticClasses</span>: <span class="highlightRed">condition2</span>,
   }"  
 &gt;&lt;/div&gt;
 ...
@@ -96,8 +99,8 @@ export default {
 export default {
   data() {
     return {
-      <span class="highlightGreen">condition1</span>: true,
-      <span class="highlightGreen">condition2</span>: false,
+      <span class="highlightRed">condition1</span>: true,
+      <span class="highlightRed">condition2</span>: false,
     }
   },
 }
@@ -128,7 +131,7 @@ export default {
         <pre contenteditable="true">
 <code>&lt;div
   :class="[
-    { <span class="highlight">alsoCanHaveStaticClasses</span>: <span class="highlightGreen">condition1</span> },
+    { <span class="highlight">alsoCanHaveStaticClasses</span>: <span class="highlightRed">condition1</span> },
     <span class="highlightBlue">dynamicClassName</span>,
     '<span class="highlight">anotherStaticClass</span>',
   ]"  
@@ -138,7 +141,7 @@ export default {
 export default {
   data() {
     return {
-      <span class="highlightGreen">condition1</span>: true,
+      <span class="highlightRed">condition1</span>: true,
       <span class="highlightBlue">dynamicClassName</span>: '<span class="highlight">static-class-name</span>',
     }
   },
@@ -174,6 +177,8 @@ export default {
 </template>
 
 <script>
+import preMixin from '@/preMixin'
+
 export default {
   data() {
     return {
@@ -182,51 +187,13 @@ export default {
       condition2: false,
     }
   },
+  mixins: [preMixin],
 }
 </script>
 
 <style lang="scss" scoped>
-a {
-  font-size: 20px;
-  color: green;
-  font-weight: bold;
-}
-
 section {
-  display: flex;
-  flex-direction: column;
-  margin: 30px auto;
-  width: 95%;
-  text-align: left;
   article {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 18px;
-    background-color: black;
-    padding: 10px;
-    border: 1px solid white;
-    pre[contenteditable] {
-      outline: none;
-      flex: auto;
-    }
-    span {
-      &.highlight {
-        color: yellow;
-      }
-      &.highlightBlue {
-        color: #679ddf;
-      }
-      &.highlightGreen {
-        color: rgb(255, 71, 71);
-      }
-    }
-    code {
-      font-family: monospace, 'courier new';
-      color: white;
-      padding: 2px;
-      font-size: 105%;
-    }
     .static-class-name {
       width: 200px;
       height: 200px;
