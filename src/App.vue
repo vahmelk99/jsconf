@@ -5,8 +5,8 @@
       <router-link to="/class-binding">Class binding</router-link> |
       <router-link to="/v-model">Custom v-model</router-link> |
       <router-link to="/$set">Vue.$set()</router-link> |
-      <router-link to="/event-bus">EventBus</router-link> |
-      <router-link to="/watchers">Watchers</router-link>
+      <router-link to="/watchers">Watchers</router-link> |
+      <router-link to="/event-bus">EventBus</router-link>
     </div>
     <transition name="slide-fade" mode="out-in">
       <router-view />
@@ -20,19 +20,12 @@
   padding: 0;
 }
 
-// html,
-// body {
-//   width: 100vw;
-//   height: 100vh;
-// }
-
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  // background-color: #ffdd00;
   min-height: 100vh;
   overflow: hidden;
 }
@@ -47,7 +40,6 @@
     text-decoration: none;
     &.router-link-exact-active {
       color: #42b983;
-      // font-size: 25px;
     }
   }
 }
@@ -85,52 +77,57 @@ section {
     background-color: black;
     padding: 10px;
     border: 1px solid white;
-    code {
-      font-family: monospace, 'courier new';
-      color: white;
-      padding: 2px;
+
+    .highlight {
+      color: yellow;
     }
-    span {
-      &.highlight {
-        color: yellow;
-      }
-      &.highlightBlue {
-        color: #679ddf;
-      }
-      &.highlightRed {
-        color: rgb(255, 71, 71);
-      }
-      &.highlightGreen {
-        color: rgb(166, 255, 0);
-      }
+    .highlightBlue {
+      color: #679ddf;
     }
+    .highlightRed {
+      color: rgb(255, 71, 71);
+    }
+    .highlightGreen {
+      color: rgb(166, 255, 0);
+    }
+    .highlightPink {
+      color: rgb(255, 0, 255);
+    }
+    .highlightSky {
+      color: rgb(0, 225, 255);
+    }
+    .highlightOrange {
+      color: rgb(255, 166, 0);
+    }
+
     pre {
       outline: none;
       flex: 1;
       margin: 0 0 1em;
       padding: 0.5em 1em;
-    }
-
-    pre code,
-    pre .line-number {
-      display: block;
-    }
-
-    pre .line-number {
-      float: left;
-      margin: 0 1em 0 -1em;
-      border-right: 1px solid;
-      text-align: right;
-    }
-
-    pre .line-number span {
-      display: block;
-      padding: 0 0.5em 0 1em;
-    }
-
-    pre .cl {
-      display: block;
-      clear: both;
+      display: flex;
+      code {
+        font-family: monospace, 'courier new';
+        color: white;
+        padding: 2px;
+        display: block;
+      }
+      .line-number {
+        display: block;
+        color: white;
+        // float: left;
+        margin: 0 1em 0 -1em;
+        border-right: 1px solid;
+        text-align: right;
+        span {
+          display: block;
+          padding: 0 0.5em 0 1em;
+          &.cl {
+            display: block;
+            clear: both;
+          }
+        }
+      }
     }
   }
 }

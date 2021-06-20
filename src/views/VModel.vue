@@ -1,5 +1,5 @@
 <template>
-  <div class="about">
+  <div>
     <h1>v-model on custom component</h1>
     <a
       class="resource"

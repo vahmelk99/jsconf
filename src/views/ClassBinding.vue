@@ -1,5 +1,5 @@
 <template>
-  <div class="about">
+  <div>
     <h1>Class binding ways</h1>
     <a
       class="resource"

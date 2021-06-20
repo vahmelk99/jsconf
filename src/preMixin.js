@@ -1,7 +1,7 @@
 export default {
   mounted() {
-    let pre = document.getElementsByTagName('pre'),
-      pl = pre.length
+    const pre = document.getElementsByTagName('pre')
+    const pl = pre.length
     for (let i = 0; i < pl; i++) {
       pre[i].innerHTML =
         '<span class="line-number"></span>' +
@@ -13,6 +13,5 @@ export default {
         line_num.innerHTML += '<span>' + (j + 1) + '</span>'
       }
     }
-    console.log(pre)
   },
 }
