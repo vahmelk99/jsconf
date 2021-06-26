@@ -111,7 +111,7 @@ methods: {
     if (this.<span class="highlight">users</span>[<span class="highlightBlue">user</span>].<span class="highlightPink">dones</span>.has(<span class="highlightRed">task</span>)) <span class="highlightSky">updatedSet</span>.delete(<span class="highlightRed">task</span>)
     else <span class="highlightSky">updatedSet</span>.add(<span class="highlightRed">task</span>)
 
-    this.<b>$set</b>(this.<span class="highlight">users</span>, <span class="highlightBlue">user</span>, { ...this.<span class="highlight">users</span>[<span class="highlightBlue">user</span>], <span class="highlightPink">dones</span>: <span class="highlightSky">updatedSet</span> })
+    this.<b><i>$set</i></b>(this.<span class="highlight">users</span>, <span class="highlightBlue">user</span>, { ...this.<span class="highlight">users</span>[<span class="highlightBlue">user</span>], <span class="highlightPink">dones</span>: <span class="highlightSky">updatedSet</span> })
     console.log(this.<span class="highlight">users</span>[<span class="highlightBlue">user</span>].<span class="highlightPink">dones</span>)
   },
 },</code></pre>
