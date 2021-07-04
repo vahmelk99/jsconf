@@ -34,6 +34,7 @@ export default {
   }
   label {
     font-style: italic;
+    color: green;
   }
 }
 </style>

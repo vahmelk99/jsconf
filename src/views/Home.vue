@@ -6,6 +6,12 @@
     </div>
     <h1>Welcome to JSConf Armenia 2021</h1>
     <h2>Vahagn Melkonyan</h2>
+    <a
+      class="resource"
+      href="https://github.com/vahmelk99/jsconf"
+      target="_blank"
+      >Slide link</a
+    >
   </div>
 </template>
 

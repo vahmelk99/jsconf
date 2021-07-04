@@ -118,8 +118,17 @@ export default {
   data() {
     return {
       pages: ['props', 'bus', 'code'],
-      selected: 2,
+      selected: 0,
     }
+  },
+  watch: {
+    selected(val) {
+      this.$nextTick(() => {
+        if (val === 2 && !this.numbered) {
+          this.numberize()
+        }
+      })
+    },
   },
   methods: {
     change(direction) {
